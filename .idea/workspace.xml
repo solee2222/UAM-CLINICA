@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c943c5e2-674d-4d26-87a1-8387fadf102a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uam/CLINICA/model/Visita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uam/CLINICA/model/YourFirstEntity.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/POO/CLINICA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700021941094</updated>
       <workItem from="1700021942965" duration="2429000" />
-      <workItem from="1700063400384" duration="6165000" />
+      <workItem from="1700063400384" duration="13645000" />
     </task>
     <servers />
   </component>
