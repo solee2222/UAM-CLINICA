@@ -11,7 +11,7 @@ public class Configuracion {
 
     @Id
     @Column(length = 20)
-    String identificacion;
+    String identificacion; //cedula
 
     @Column(length = 20)
     @Required

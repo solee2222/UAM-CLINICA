@@ -11,7 +11,7 @@ import org.hibernate.annotations.GenericGenerator;
 import lombok.*;
 
 @Entity @Getter @Setter
-public class Visita extends Identifiable {
+public class Visita {
 
 	@Id
 	@Hidden // La propiedad no se muestra al usuario. Es un identificador interno
@@ -37,4 +37,7 @@ public class Visita extends Identifiable {
 
 	@Column(length=70) @Required
 	String carrera;
+
+	@Embedded
+	Receta receta;
 }
