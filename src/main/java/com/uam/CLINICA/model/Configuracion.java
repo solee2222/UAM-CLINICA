@@ -5,8 +5,7 @@ import org.openxava.annotations.Required;
 
 import javax.persistence.*;
 
-@Entity //se almacenan los doctores que operan la clinica
-@Getter @Setter
+@Entity @Getter @Setter //se almacenan los doctores que operan la clinica
 public class Configuracion {
 
     @Id

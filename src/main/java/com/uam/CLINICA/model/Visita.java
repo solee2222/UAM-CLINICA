@@ -5,6 +5,7 @@ import java.time.*;
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
+import org.openxava.calculators.CurrentLocalDateCalculator;
 import org.openxava.model.*;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -17,13 +18,15 @@ public class Visita {
 	@Hidden // La propiedad no se muestra al usuario. Es un identificador interno
 	@GeneratedValue(generator="system-uuid") // Identificador Universal Único (1)
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
-
 	@Column(length=32)
 	String oid; //identificador por cada ingreso de visita
 
+	@Required
+	@DefaultValueCalculator(CurrentLocalDateCalculator.class) // Fecha actual
 	LocalDate date; //fecha
 
 	@StringTime  @Required
+	//@DefaultValueCalculator(CurrentLocalTimeCalculator.class)
 	String horadeEntrada;
 
 	@StringTime  @Required
@@ -35,7 +38,7 @@ public class Visita {
 	@Column(length=50) @Required
 	String nombrePaciente;
 
-	@Column(length=70) @Required
+	@Column(length=70)
 	String carrera;
 
 	@Embedded
