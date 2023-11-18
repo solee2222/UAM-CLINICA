@@ -1,6 +1,7 @@
 package com.uam.CLINICA.model;
 
 import java.time.*;
+import java.util.Collection;
 
 import javax.persistence.*;
 
@@ -12,35 +13,28 @@ import org.hibernate.annotations.GenericGenerator;
 import lombok.*;
 
 @Entity @Getter @Setter
-public class Visita {
-
-	@Id
-	@Hidden // La propiedad no se muestra al usuario. Es un identificador interno
-	@GeneratedValue(generator="system-uuid") // Identificador Universal Único (1)
-	@GenericGenerator(name="system-uuid", strategy = "uuid")
-	@Column(length=32)
-	String oid; //identificador por cada ingreso de visita
+public class Visita extends Identificable{
 
 	@Required
 	@DefaultValueCalculator(CurrentLocalDateCalculator.class) // Fecha actual
-	LocalDate date; //fecha
+	private LocalDate date; //fecha
 
 	@StringTime  @Required
 	//@DefaultValueCalculator(CurrentLocalTimeCalculator.class)
-	String horadeEntrada;
+	private String horadeEntrada;
 
 	@StringTime  @Required
-	String horadeSalida;
+	private String horadeSalida;
 
 	@Column(length=10) @Required //cif y sino cedula
-	String cif;
+	private String cif;
 
-	@Column(length=50) @Required
-	String nombrePaciente;
+	@Required
+	private String nombrePaciente;
 
-	@Column(length=70)
-	String carrera;
+	private String carrera;
 
 	@Embedded
 	Receta receta;
+
 }

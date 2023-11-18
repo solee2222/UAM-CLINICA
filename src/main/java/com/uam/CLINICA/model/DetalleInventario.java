@@ -10,10 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Inventario") //para que en la interfaz de usuario salga como Inventario
+//@Table(name = "Inventario") //para que en la interfaz de usuario salga como Inventario
 @Getter
 @Setter
-public class DetalleInventario {
+public class DetalleInventario extends Identificable{
 
     @Id
     @Column(length = 20)
@@ -30,6 +30,5 @@ public class DetalleInventario {
     @Column(length = 20)
     @Required
     Integer minimoExistencia;
-
 
 }

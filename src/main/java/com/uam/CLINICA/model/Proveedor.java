@@ -8,13 +8,7 @@ import org.openxava.annotations.*;
 import javax.persistence.*;
 
 @Entity @Getter @Setter
-public class Proveedor {
-    @Id
-    @Hidden // La propiedad no se muestra al usuario. Es un identificador interno
-    @GeneratedValue(generator="system-uuid") // Identificador Universal Único (1)
-    @GenericGenerator(name="system-uuid", strategy = "uuid")
-    @Column(length = 20)
-    String idProveedor;
+public class Proveedor extends Identificable{
 
     @Column(length = 20)
     @Required
@@ -25,7 +19,7 @@ public class Proveedor {
     String compania;
 
     @Column(length = 20)
-    String correo;
+    String correo; //y si tiene mas de un correo... habria que hacer otra clase
 
 
 }
